@@ -5,8 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const path = require('path');
 
 const siteConfig = {
+    customDocsPath: path.basename(__dirname) + '/docs',
+
     title: 'BOOL Network Docs', // Title for your website.
     tagline: 'BOOL Network Documentations',
     url: 'https://docs.bool.network', // Your website URL
