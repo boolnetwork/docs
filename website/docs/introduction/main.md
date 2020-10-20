@@ -8,4 +8,4 @@ Based on the cross chain requirements, a general inter chain message routing pro
 
 The main roles of boolnetwork platform are relay chain, gateway and subchain. Relay chain is responsible for message recording, verification and other functions. Gateway is responsible for heterogeneous chain access, processing and assembly of external messages, message chain and other responsibilities. The subchain is a blockchain registered on the relay chain. It can be an alliance chain, a public chain, or even a centralized service. By accessing the relay chain, the sub chains can communicate with each other.
 
-![architecture](/static/architecture.png)
+![architecture](/img/architecture.png)
