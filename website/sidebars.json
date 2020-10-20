@@ -1,10 +1,22 @@
 {
-  "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
-  }
+    "docs": {
+        "Introduction": [
+            "introduction/main",
+            "introduction/tss",
+            "introduction/bmrp",
+            "introduction/gateway"
+        ],
+        "Modules": [
+            "modules/token",
+            "modules/router",
+            "modules/keyring"
+        ],
+        "Economics": [
+            "economics/slash",
+            "economics/liquidity"
+        ],
+        "Tools": [
+            "tools/sdk"
+        ]
+    }
 }

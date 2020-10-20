@@ -5,8 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+const path = require('path');
 
 const siteConfig = {
+    customDocsPath: path.basename(__dirname) + '/docs',
+
     title: 'BOOL Network Docs', // Title for your website.
     tagline: 'BOOL Network Documentations',
     url: 'https://docs.bool.network', // Your website URL
@@ -23,9 +26,7 @@ const siteConfig = {
 
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
-        { doc: 'doc1', label: 'Docs' },
-        { doc: 'doc4', label: 'API' },
-        { blog: true, label: 'Blog' },
+        { doc: 'introduction/main', label: 'Docs' },
     ],
 
     /* path to images for header/footer */
