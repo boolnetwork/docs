@@ -14,7 +14,7 @@ const siteConfig = {
     tagline: 'BOOL Network Documentations',
     url: 'https://docs.bool.network', // Your website URL
     baseUrl: '/', // Base URL for your project */
-    cname: 'docs.nervos.org',
+    cname: 'docs.bool.network',
 
 
     // Used for publishing and more
