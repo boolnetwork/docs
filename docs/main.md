@@ -1,5 +1,4 @@
----
-id: doc1
+id: main
 title: Platform architecture
 sidebar_label: Platform architecture
 ---

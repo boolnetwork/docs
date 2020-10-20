@@ -25,7 +25,6 @@ const siteConfig = {
     headerLinks: [
         { doc: 'doc1', label: 'Docs' },
         { doc: 'doc4', label: 'API' },
-        { blog: true, label: 'Blog' },
     ],
 
     /* path to images for header/footer */
