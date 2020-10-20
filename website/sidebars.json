@@ -1,10 +1,10 @@
 {
     "docs": {
-        "Introduce": [
-            "introduce/main",
-            "introduce/tss",
-            "introduce/bmrp",
-            "introduce/gateway"
+        "Introduction": [
+            "introduction/main",
+            "introduction/tss",
+            "introduction/bmrp",
+            "introduction/gateway"
         ],
         "Modules": [
             "modules/token",
