@@ -1,6 +1,7 @@
+---
 id: bmrp
 title: Blockchain Message Router Protocol
-sidebar_label: Platform architecture
+sidebar_label: Blockchain Message Router Protocol
 ---
 
 In the blockchain paradigm, asymmetric encryption is usually used to ensure the security of assets. Private key signature is required to modify the status on the blockchain. In the public chain architecture, in order to prevent DoS attacks, the cost mechanism is introduced. However, this brings about the difficulty of handling fee clearing caused by different asset values across message chains on different blockchains. Through the introduction of resource free trading mechanism, we can achieve real-time clearing of cross chain message costs, without human intervention, and system access to asset balance.
