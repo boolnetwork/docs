@@ -1,7 +1,7 @@
 ---
-id: bmrp
-title: Blockchain Message Router Protocol
-sidebar_label: Blockchain Message Router Protocol
+id: gateway
+title: Gateway
+sidebar_label: Gateway
 ---
 
 Gateway can be regarded as an interactive component linking different blockchain systems. It is mainly composed of signature module and forwarding module.
