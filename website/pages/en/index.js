@@ -60,7 +60,7 @@ class HomeSplash extends React.Component {
 
         return (
             <SplashContainer>
-                <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
+                {/* <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} /> */}
                 <div className="inner">
                     <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
                     <PromoSection>
@@ -133,8 +133,7 @@ class Index extends React.Component {
             <Block background="light">
                 {[
                     {
-                        content:
-                            'Each new Docusaurus project has **randomly-generated** theme colors.',
+                        content:'Each new Docusaurus project has **randomly-generated** theme colors.',
                         image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
                         imageAlign: 'right',
                         title: 'Randomly Generated Theme Colors',
@@ -147,16 +146,16 @@ class Index extends React.Component {
             <Block layout="fourColumn">
                 {[
                     {
-                        content: 'This is the content of my feature',
+                        // content: 'This is the content of my feature',
                         image: `${baseUrl}img/undraw_react.svg`,
                         imageAlign: 'top',
-                        title: 'Feature One',
+                        title: 'Platform architecture',
                     },
                     {
-                        content: 'The content of my second feature',
+                        // content: 'The content of my second feature',
                         image: `${baseUrl}img/undraw_operating_system.svg`,
                         imageAlign: 'top',
-                        title: 'Feature Two',
+                        title: 'Threshold Signature',
                     },
                 ]}
             </Block>
@@ -186,22 +185,22 @@ class Index extends React.Component {
                     <div className="more-users">
                         <a className="button" href={pageUrl('users.html')}>
                             More {siteConfig.title} Users
-            </a>
+                        </a>
                     </div>
                 </div>
             );
         };
-
         return (
             <div>
                 <HomeSplash siteConfig={siteConfig} language={language} />
                 <div className="mainContainer">
-                    <Features />
-                    <FeatureCallout />
-                    <LearnHow />
+                    
+                    <Features  />
+                    {/* <FeatureCallout /> */}
+                    {/* <LearnHow />
                     <TryOut />
                     <Description />
-                    <Showcase />
+                    <Showcase /> */}
                 </div>
             </div>
         );
