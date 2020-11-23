@@ -4,12 +4,14 @@
             "introduction/main",
             "introduction/tss",
             "introduction/bmrp",
-            "introduction/gateway"
+            "introduction/gateway",
+            "introduction/node",
+            "introduction/network"
         ],
-        "Modules": [
-            "modules/token",
-            "modules/router",
-            "modules/keyring"
+        "Design": [
+            "design/token",
+            "design/router",
+            "design/keyring"
         ],
         "Economics": [
             "economics/slash",
