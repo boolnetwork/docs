@@ -28,16 +28,13 @@ The nodes in offline state and exit state will not be selected as signature node
 
 ## Key fragment transfer protocol
 
-Private key transfer protocol: node a wants to transfer the private key s to node B. A and B can first conduct a key exchange to suggest the same shared key K. then a uses a symmetric encryption algorithm AES to encrypt s, and then sends it to B. after getting the ciphertext, B uses the previously established shared key K to decrypt s.
+Suppose the TSS player A wants to transfer his private key s to another TSS player B. Typically, this can be realized by using a key exchange protocol and a symmetric-key encryption scheme, such the standard AES algorithm. The idea is that after performing the key exchange protocol, A and B will establish a shared secret key. Then A uses the shared key and the AES algorithm to encrypt s, and sends the ciphertext to B. Finally, B decrypts the ciphertext using the shared key and obtains the plaintext, which is the private key s. The protocol is depicted as follows.
 
-Specific agreement:
+1. Key Exchange Protocol:
+Public parameters：p: a large prime, Zp is a cyclic group，g: generator of Zp.
 
-1. Key exchange:
+![keyExchangeStep1](/img/key_exchange_protocol1.png)
 
-Common parameter: P: large prime, integer set z = {2,3,4 P-2}, G: integers within Z.
+2. Key Transfer Using AES：
 
-![keyExchangeStep1]()
-
-2. Using AES algorithm to transfer private key:
-
-![keyExchangeStep2]()
+![keyExchangeStep2](/img/key_exchange_protocol2.png)
