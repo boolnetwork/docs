@@ -9,11 +9,13 @@
             "introduction/network"
         ],
         "Design": [
+            "design/modules",
             "design/token",
             "design/router",
             "design/keyring"
         ],
         "Economics": [
+            "economics/bool",
             "economics/slash",
             "economics/liquidity"
         ],

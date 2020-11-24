@@ -6,7 +6,7 @@ sidebar_label: BOL
 
 ## What are BOL? 
 
-BOL is the native token of bool network, similar to eth of Ethereum.
+BOL is the native token of bool network, similar to ETH of Ethereum.
 
 ## BOOL Network
 
@@ -17,7 +17,7 @@ BOL is the native token of bool network, similar to eth of Ethereum.
 |Millibol (mBOL) |7             |
 |Bol (BOL)       |10            |
 
-## What are the uses of DOT?
+## What are the uses of BOL?
 
 1. To be be staked for operation.
 

@@ -6,7 +6,7 @@ sidebar_label: Network Protocol
 
 The communication model of threshold signature is a key point to realize practical threshold system. The consensus protocols used in distributed systems need to consider the potential error channel. Therefore, when we discuss the distributed system, we must first define the communication settings, that is, the network model. A point-to-point network is formed between threshold nodes, which means that every message will be broadcast to each node in the network through the gossip protocol.
 
-Because transactions, signatures, and blocks are delivered in the protocol, it takes some time for messages to synchronize between participants. If messages can be arbitrarily delayed or even discarded, consensus protocols must take this into account.
+Because transactions, signatures, and blocks are delivered in the protocol, it takes some time for messages to synchronize between participants. If messages can be arbitrarily delayed or even discarded, Threshold signature protocol must take this into account.
 
 Therefore, the network model is set as follows:
 
