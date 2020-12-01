@@ -32,3 +32,15 @@ TODO
 3. To be liquidity provider.
 
 TODO
+
+
+## Economic Stakeholders
+* Validators: Provide the computational resource and security for the network by running nodes.
+* Threshold Noders： Provide security for cross chain assets.
+* Developers: Create the applications which run atop the network.
+* Token Holders: Accounts or applications which maintain token balances.
+* BOOL Foundation: An independent entity which coordinates the governance and technical evolution efforts of the network participants.
+* Third Party Observers: The observers of the chain who provide extra fraud and bad behavior protection.
+* Users: Users of applications on the network who do not maintain token balances.
+
+The impact of economic policies on each of these stakeholders is examined below.
