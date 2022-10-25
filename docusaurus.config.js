@@ -66,12 +66,12 @@ const config = {
             type: "localeDropdown",
             position: "right",
           },
-          //   {
-          //     type: "doc",
-          //     docId: "welcome",
-          //     position: "left",
-          //     label: "入门指南",
-          //   },
+          {
+            type: "doc",
+            docId: "welcome",
+            position: "left",
+            label: "入门指南",
+          },
           {
             href: "https://github.com/boolnetwork/docs",
             label: "GitHub",
