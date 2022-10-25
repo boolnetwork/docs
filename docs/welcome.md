@@ -1,6 +1,7 @@
 ---
 id: welcome
 sidebar_position: 1
+slug: /
 ---
 
 # 入门指南

@@ -1,8 +1,3 @@
----
-id: welcome
-position: 3
----
-
 # 概述
 
 BOOLNetwork 平台及其与 Polkadot 区块链的关系概述。
