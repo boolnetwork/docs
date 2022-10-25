@@ -59,7 +59,7 @@ const config = {
       navbar: {
         title: "BOOL Docs",
         logo: {
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [
           {
