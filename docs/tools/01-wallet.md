@@ -6,6 +6,8 @@
 
 ## polkadotjs 和 BOOLNetwork
 
+
+
 ## MetaMask 和 BOOLNetwork
 
 [MetaMask](https://metamask.io/) 是一个加密钱包，可以在 web 浏览器和移动设备上使用，与以太坊区块链交互。许多 dapp 都集成了 MetaMask，我们很高兴能将其功能引入 BOOLNetwork 生态系统。
@@ -14,6 +16,28 @@
 
 ### 如何使用 MetaMask
 
-在开始之前，必须下载 MetaMask，并完成一些基本配置。按照下面的链接获取：
+在开始之前，必须下载 MetaMask，并完成一些基本配置。按照下面的步骤操作：
 
-- [下载 MetaMask]
+- [下载 MetaMask](https://metamask.io/download/)并创建账户。
+- 配置 MetaMask 增加 BOOLNetwork 网络。
+
+配置信息如下：
+
+|          |                                    |
+| -------- | ---------------------------------- |
+| 网络名称 | BoolNetwork                        |
+| RPC URL  | https://rpc-node-http.bool.network |
+| 链 ID    | 47                                 |
+| 符号     | tBOL                               |
+
+:::info
+目前是测试网阶段，代币为 tBOL，正式网为 BOL。
+:::
+
+1. 点击浏览器插件栏中的小狐狸
+
+2. 进入"设置"，后选择"网络"
+
+3.
+
+最后切换到 BoolNetwork，即可发起转账等操作。

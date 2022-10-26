@@ -22,23 +22,27 @@ BOOLNetwork 的愿景是链接一切，为 Web3 构建一个横跨全球的可�
 
 通过我们的愿景、白皮书和资源的概述，学习 BOOLNetwork。
 
-[官网](https://bool.network/)
-[BOOLNetwork 是什么](https://docs.bool.network/general/overview)
-[术语](https://docs.bool.network/general/glossary)
+[官网](https://bool.network/)  
+[概述](./general/overview)  
+[术语](./general/glossary)  
 [GitHub](https://github.com/boolnetwork)
 
 ## 使用 BOOLNetwork
 
 作为持有者、验证者和开发人员，使用 BOOLNetwork 生态系统中的工具。
 
-[准备开始]
-[验证人]
+[验证人]  
 [动态委员会]
 
 ## 预览 BOOLNetwork
 
-[浏览器]
-[控制面板]
+[钱包](./tools/wallet)  
+[浏览器](https://boolscan.com/)  
+[控制面板](https://apps.bool.network/)
+
+## SDK
+
+[Polkadotjs](https://polkadot.js.org/docs/)
 
 :::tip 寻求帮助 💬
 

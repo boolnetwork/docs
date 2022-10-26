@@ -20,7 +20,7 @@ BOL 是支持 BOOLNetwork 区块链和生态系统增长和发展的平台原生
 
 ## BOOLNetwork 概述
 
-BoolNetwork 与 Polkadot 都是基于 substrate 框架设计，虽然 Polkadot 是异构跨链，但局限于 substrate 开发平台，对于非 substrate 开发的现有区块链，Polkadot 引入转接桥方案，弥补非生态内跨链的不足。而 BoolNetwork 的跨链架构在具体实现中采用门限签名的方式，而无需再引入转接桥，BOOLNetwork 采用分布式私钥控制跨链解决方案，BoolNetwork 强大的跨链机制使得它既可以作为转接桥，成为 Polkadot 的外部系统，成为 Polkadot 生态成型、拓展和扩张的基础，同时也可以完全独立运行，成为可以支持跨链的开源公链。
+BoolNetwork 与 Polkadot 都是基于 substrate 框架设计，虽然 Polkadot 是异构跨链，但局限于 substrate 开发平台，对于非 substrate 开发的现有区块链，Polkadot 引入转接桥方案，弥补非生态内跨链的不足。而 BoolNetwork 的跨链方案基于公证人方式，而无需再引入转接桥。BoolNetwork 强大的跨链机制使得它既可以作为转接桥，成为 Polkadot 的外部系统，成为 Polkadot 生态成型、拓展和扩张的基础，同时也可以完全独立运行，成为可以支持跨链的开源公链。
 
 ## BoolNetwork 的设计原则和特性
 
@@ -29,7 +29,7 @@ BoolNetwork 区块链设计原则如下：
 
 1. 高性能。
 
-   采用了并行计算和并行存储的方式，通过 NPOS 共识机制，以多任务的并行方式进行共识计算，从而提升了计算性能，可扩展至至少每秒数千次(TPS)。
+   通过 NPOS 共识机制，以出块与最终确定分离的共识计算，从而提升了计算性能，可扩展至至少每秒数千次(TPS)。
 
 2. 高通用性
 
@@ -41,13 +41,13 @@ BoolNetwork 区块链设计原则如下：
 
 4. 高可互操作性
 
-   BOOLNetwork 的设计目的之一就是让区块链上的 DAPP 和智能合约可以无缝地与其他链上的数据或资产进行交易，基于 TSS 的门限签名技术，使 Bool 具备强大的跨链互操作性，用户只需要使用 Bool 钱包即可管理主流数字资产（BTC、ETH 等），不需要在钱包的各种多链模块中频繁切换，可直接将 BTC、ETH 等资产以去中心化的方式转移到 Bool 链上，当接入 Bool 的区块链越多，Bool 的互操作性就越强，当所有的区块链都能链接互通时，会带来更好的资本、更好的用户体验、同时也能加强 Bool 的扩展性和交易速度。BoolNetwork 的设计目的之一就是让区块链上的 DApp 和智能合约可以无缝地与其他链上的数据或资产进行交易。
+   BOOLNetwork 的设计目的之一就是让区块链上的 DAPP 和智能合约可以无缝地与其他链上的数据或资产进行交易，基于 TSS 的门限签名技术，使 BOOLNetwork 具备强大的跨链互操作性，可将 ETH, BSC 等资产以去中心化的方式相互转移，当接入 BOOLNetwork 的区块链越多，BOOLNetwork 的互操作性就越强，当所有的区块链都能链接互通时，会带来更好的资本、更好的用户体验。
 
 :::tip 了解更多 📚
 
-[概述](https://github.com/boolnetwork/overview)
-[BOOLNetwork 经济模型]
-[BOOLNetwork 白皮书]
+[概述](https://github.com/boolnetwork/overview)  
+[BOOLNetwork 经济模型]  
+[BOOLNetwork 白皮书]  
 [BOOLNetwork 技术论文]
 
 :::
