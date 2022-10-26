@@ -23,8 +23,8 @@ BOOLNetwork 的愿景是链接一切，为 Web3 构建一个横跨全球的可�
 通过我们的愿景、白皮书和资源的概述，学习 BOOLNetwork。
 
 [官网](https://bool.network/)  
-[概述](./general/overview)  
-[术语](./general/glossary)  
+[概述](/general/overview)  
+[术语](/general/glossary)  
 [GitHub](https://github.com/boolnetwork)
 
 ## 使用 BOOLNetwork
@@ -36,12 +36,12 @@ BOOLNetwork 的愿景是链接一切，为 Web3 构建一个横跨全球的可�
 
 ## 预览 BOOLNetwork
 
-[钱包](./tools/wallet)  
-[浏览器](https://boolscan.com/)  
-[控制面板](https://apps.bool.network/)
+[钱包](/tools/wallet)  
+[浏览器](https://boolscan.com/)
 
-## SDK
+## SDK & 接口
 
+[接口](/developer/api/storage)  
 [Polkadotjs](https://polkadot.js.org/docs/)
 
 :::tip 寻求帮助 💬
