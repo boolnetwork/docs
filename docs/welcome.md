@@ -23,8 +23,8 @@ BOOLNetwork 的愿景是链接一切，为 Web3 构建一个横跨全球的可�
 通过我们的愿景、白皮书和资源的概述，学习 BOOLNetwork。
 
 [官网](https://bool.network/)
-[BOOLNetwork 是什么]
-[术语]
+[BOOLNetwork 是什么](https://docs.bool.network/general/overview)
+[术语](https://docs.bool.network/general/glossary)
 [GitHub](https://github.com/boolnetwork)
 
 ## 使用 BOOLNetwork
