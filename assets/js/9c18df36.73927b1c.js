@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[61],{5679:e=>{e.exports=JSON.parse('{"title":"\u5f00\u53d1\u8005","slug":"/category/\u5f00\u53d1\u8005","permalink":"/category/\u5f00\u53d1\u8005","navigation":{"previous":{"title":"FAQ","permalink":"/general/FAQ"},"next":{"title":"\u63a5\u53e3","permalink":"/category/\u63a5\u53e3"}}}')}}]);
