@@ -62,7 +62,8 @@ custom type:
       "Creating",
       "Initializing",
       "Stop",
-      "Working"
+      "Working",
+      "CreateFinished"
     ]
 },
 "ChannelState": {
@@ -70,12 +71,6 @@ custom type:
       "Stop",
       "Working"
     ]
-},
-"HandleConnection": {
-    "_enum": {
-      "Cid": "CommitteeId",
-      "CommitteeParam": "(u16, u16, (u128, u128), CryptoType, u8)"
-    }
 },
 "CryptoType": {
     "_enum": [
@@ -86,9 +81,8 @@ custom type:
 },
 "Channel": {
     "channel_id": "u32",
-    "chains": "(u16, u16)",
     "info": "Vec<u8>",
-    "cids": "(CommitteeId, CommitteeId)",
+    "cids": "Vec<(CommitteeId, u32)>",
     "state": "ChannelState"
 },
 "Parameters": {
@@ -101,11 +95,12 @@ custom type:
     "parameters": "Parameters",
     "pubkey": "Vec<u8>",
     "state": "CommitteeState",
-    "fee": "(u128, u128)",
     "crypto": "CryptoType",
     "fork": "u8",
-    "channel_id": "u32"
-},
+    "channel_id": "u32",
+    "chain_id": "u32",
+    "anchor": "Vec<u8>"
+  },
 "TxSource": {
     "chain_type": "u16",
     "uid": "Vec<u8>",
@@ -299,11 +294,6 @@ custom type:
 
 - **interface**: `api.query.committee.epochChanges`
 - **summary**: Epoch change message(e.g. signature) submitted by new epoch members.
-
-### addressForCommittee(`CommitteeId`): `Vec<u8>`
-
-- **interface**: `api.query.committee.addressForCommittee`
-- **summary**: Anchor address about the committee.
 
 ### rewardsForFork(`(CommitteeId, u32, u8)`): `(u128, Vec<Vec<u8>>)`
 

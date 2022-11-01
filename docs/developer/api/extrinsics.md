@@ -16,7 +16,8 @@ custom type:
 "HandleConnection": {
     "_enum": {
       "Cid": "CommitteeId",
-      "CommitteeParam": "(u16, u16, (u128, u128), CryptoType, u8)"
+      "CidWithAnchor": "(CommitteeId, u32, Vec<u8>)",
+      "CommitteeParam": "(u16, u16, CryptoType, u8)"
     }
 },
 ```
@@ -169,17 +170,22 @@ custom type:
 - **interface**: `api.tx.committee.exit`
 - **summary**: Device exit from Register-List and will successfully.
 
-### createChannel(chains: `(u16, u16)`, info: `Vec<u8>`, connection: `(HandleConnection, HandleConnection)`)
+### createChannel(info: `Vec<u8>`, connection: `Vec<HandleConnection>`)
 
 - **interface**: `api.tx.committee.createChannel`
-- **summary**: Create a new channel and connect to two Committee.
+- **summary**: Create a new channel and connect to Committees.
 
-### createCommittee(t: `u16`, n: `u16`, fee: `(u128, u128)`, crypto: `CryptoType`, fork: `u8`)
+### bindCommittees(chain_id: `u32`, cids: `Vec<CommitteeId>`)
+
+- **interface**: `api.tx.committee.bindCommittees`
+- **summary**:    Bind committees with target channel
+
+### createCommittee(t: `u16`, n: `u16`, crypto: `CryptoType`, fork: `u8`)
 
 - **interface**: `api.tx.committee.createCommittee`
 - **summary**: Create a committee with parameters.
 
-### activeCommittee(cid: `CommitteeId`, address: `Vec<u8>`)
+### activeCommittee(cid: `CommitteeId`, chain_id: `u32`, address: `Vec<u8>`)
 
 - **interface**: `api.tx.committee.activeCommittee`
 - **summary**: Bind anchor address with committee.
