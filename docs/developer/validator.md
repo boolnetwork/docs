@@ -94,4 +94,4 @@ curl -X POST http://127.0.0.1:9933 -H "Content-type: application/json" -d '{"id"
 - CPU：至少 4 核
 - 内存：至少 16G 内存，越大越好
 - 存储： 至少 1T SSD/HHD，越大越好
-- 网络： 独立 IP，至少 100M 带宽，越大越好。
+- 网络： 独立 IP，至少 20M 带宽，越大越好。
