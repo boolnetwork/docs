@@ -48,6 +48,20 @@ sudo reboot
 
 ### 配置
 
+在 configs 目录配置参数，大多参数可以直接使用默认值，需要特别注意如下几个参数，按用户实际情况配置：
+
+- watcher.toml
+
+  - identity： 与 bool 链交互的账户，用于签名，包括设备注册、设备在线、奖励获取等。 该账户同时是设备的拥有者。
+  - boot_nodes：
+  - peer_key：p2p 网络的通讯的身份。
+
+- monitor.toml
+  - private_key: 与目标链交互的签名账户，该账户将跨链的数据提交到目标链上。
+  - http_url： 目标链的 JSON RPC 接口，建议到 Infura 等节点服务提供商申请自己的账户。
+
+### 命令
+
 开始挖矿
 
 ```bash
@@ -66,7 +80,7 @@ sudo reboot
 
 ```
 
-启动内部节点
+启动节点
 
 ```bash
 docker run -itd -e RUST_LOG=debug -v /mnt/lky/data2:/data -p 30333:30333 -p 9944:9944 boolnetwork/bnk-node:pre-release --dev --rpc-cors 127.0.0.1 --validator --bootnodes /dns/node.bool.network/tcp/30334/p2p/12D3KooWRHfE3Qpm8iBrSrMDpeVwkmJ7nYHgjGyynYNwzwizg9wL --unsafe-ws-external
@@ -75,7 +89,7 @@ docker run -itd -e RUST_LOG=debug -v /mnt/lky/data2:/data -p 30333:30333 -p 9944
 启动 database server
 
 ```bash
-docker run --net=host -it --rm -e RUST_LOG=info  -v `pwd`/configs/db.toml:/bnk/db.toml boolnetwork/bnk-database:latest
+docker run --net=host -it --rm -e RUST_LOG=info  -v `pwd`/configs/db.toml:/bnk/db.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-database:latest
 ```
 
 启动 watcher server
@@ -87,9 +101,13 @@ docker run --net=host -it --rm -e RUST_LOG=info  -v `pwd`/configs/watcher.toml:/
 启动 SGX-KEY-SERVER
 
 ```bash
- docker run --rm --net=host --device /dev/sgx/enclave --device /dev/sgx/provision -v `pwd`/configs/key_config_alice.toml:/bnk/key.toml -p 9701:9701  -e RUST_LOG=info boolnetwork/bnk-sgx-key-server
+docker run --rm --net=host --device /dev/sgx/enclave --device /dev/sgx/provision -v `pwd`/configs/key.toml:/bnk/key.toml -p 9701:9701  -e RUST_LOG=info boolnetwork/bnk-sgx-key-server
+```
 
-  docker run --rm --net=host --device /dev/sgx/enclave --device /dev/sgx/provision -v `pwd`/configs/key.toml:/bnk/key.toml -p 9701:9701  -e RUST_LOG=info boolnetwork/bnk-sgx-key-server
+启动 monitor
+
+```bash
+docker run --net=host -it --rm -e RUST_LOG=info  -v `pwd`/configs/monitor.toml:/bnk/monitor.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-monitor:latest
 ```
 
 ## 问题
