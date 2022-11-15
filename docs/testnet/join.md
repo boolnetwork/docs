@@ -30,7 +30,7 @@ BOOLNetwork 链的账户是以太坊兼容的，因此安装了 Metamask 插件�
 - [Binance 测试网水龙头](https://testnet.binance.org/faucet-smart)(BSC Testnet)
 
 ## 通过以下任一方式加入
-#### [验证人与提名人](/testnet/验证人与提名人)
-#### [设备供应商](/testnet/设备供应商)
-#### [跨链桥供应商](/testnet/跨链桥供应商)
-#### [中继人](/testnet/中继人)
+#### [验证人与提名人](/testnet/validator_and_nominator)
+#### [设备供应商](/testnet/deveice_provider)
+#### [跨链桥供应商](/testnet/bridge_provider)
+#### [中继人](/testnet/relayer)

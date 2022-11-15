@@ -1,4 +1,8 @@
-#### 加入跨链桥供应商
+# 跨链桥供应商
+
+提供跨链桥用于完成跨链需求获取收益
+
+---
 
 1. 首先进入并登录 Dsahboard-Committee 板块，创建委员会(1 个跨链桥至少需要 2 组委员会)
 ![create_committee](/img/testnet/create_committee.png)
