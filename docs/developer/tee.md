@@ -6,7 +6,7 @@
 
 ## 硬件要求
 
-:::tip
+::: tip
 隐私节点最重要的是 SGX 环境
 :::
 
@@ -38,22 +38,14 @@ git clone ...
 可根据[Intel SGX processors](https://www.intel.com/content/www/us/en/support/articles/000028173/processors.html) 查看当前 cpu 是否支持 SGX
 :::
 
-在终端执行以下命令，执行后计算机应该会重新启动。
-
-```bash
-cd mining-store/tools
-sudo ./sgx_enable
-sudo reboot
-```
-
 ### 配置
 
-在 configs 目录配置参数，大多参数可以直接使用默认值，需要特别注意如下几个参数，按用户实际情况配置：
+配置 configs 目录中各服务启动参数，大多参数可以直接使用默认值，需要特别注意如下几个参数，按实际情况配置：
 
 - watcher.toml
 
   - identity： 与 bool 链交互的账户，用于签名，包括设备注册、设备在线、奖励获取等。 该账户同时是设备的拥有者。
-  - boot_nodes：
+  - boot_nodes：p2p 网络的种子节点。
   - peer_key：p2p 网络的通讯的身份。
 
 - monitor.toml
@@ -62,52 +54,72 @@ sudo reboot
 
 ### 命令
 
-开始挖矿
+通过 docker-compose 启动。
+
+#### 开始挖矿
 
 ```bash
-
+docker-compose up -d
 ```
 
-查看挖矿状态
+#### 查看挖矿状态
 
 ```bash
-
+docker-compose logs
 ```
 
-停止挖矿
+#### 停止挖矿
 
 ```bash
-
+docker-compose stop
 ```
 
-启动节点
+### 单独启动服务
+
+对于挖矿指令，我们可以拆解成如下服务：
+
+::: info
+我们需要关注运行服务的数据持久化。 例子中已将关键数据目录做了磁盘映射。
+:::
+
+#### 启动节点服务
 
 ```bash
-docker run -itd -e RUST_LOG=debug -v /mnt/lky/data2:/data -p 30333:30333 -p 9944:9944 boolnetwork/bnk-node:pre-release --dev --rpc-cors 127.0.0.1 --validator --bootnodes /dns/node.bool.network/tcp/30334/p2p/12D3KooWRHfE3Qpm8iBrSrMDpeVwkmJ7nYHgjGyynYNwzwizg9wL --unsafe-ws-external
+docker run --net=host --rm -e RUST_LOG=info -v `pwd`/data:/data boolnetwork/bnk-node:latest --unsafe-ws-external
 ```
 
-启动 database server
+#### 启动数据库服务
 
 ```bash
-docker run --net=host -it --rm -e RUST_LOG=info  -v `pwd`/configs/db.toml:/bnk/db.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-database:latest
+docker run --net=host --rm -e RUST_LOG=info  -v `pwd`/configs/db.toml:/bnk/db.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-database:latest
 ```
 
-启动 watcher server
+#### 启动观察者服务
 
 ```bash
-docker run --net=host -it --rm -e RUST_LOG=info  -v `pwd`/configs/watcher.toml:/bnk/watcher.toml boolnetwork/bnk-watcher:latest
+docker run --net=host --rm -e RUST_LOG=info  -v `pwd`/configs/watcher.toml:/bnk/watcher.toml boolnetwork/bnk-watcher:latest
 ```
 
-启动 SGX-KEY-SERVER
+#### 启动 SGX 私钥服务
 
 ```bash
 docker run --rm --net=host --device /dev/sgx/enclave --device /dev/sgx/provision -v `pwd`/configs/key.toml:/bnk/key.toml -p 9701:9701  -e RUST_LOG=info boolnetwork/bnk-sgx-key-server
 ```
 
-启动 monitor
+#### 启动链监视服务
 
 ```bash
-docker run --net=host -it --rm -e RUST_LOG=info  -v `pwd`/configs/monitor.toml:/bnk/monitor.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-monitor:latest
+docker run --net=host --rm -e RUST_LOG=warn,info=bnk_monitor  -v `pwd`/configs/monitor.toml:/bnk/monitor.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-monitor:latest
 ```
 
-## 问题
+#### 启动中继服务
+
+```bash
+docker run --net=host --rm -e RUST_LOG=debug boolnetwork/bnk-relayer:latest -w=http://127.0.0.1:8720 -m=http://127.0.0.1:8740 -p=8750
+```
+
+参数说明：
+
+- `-w`：观察者服务的访问链接。
+- `-m`: 链监视服务的访问链接。
+- `-p`: 默认值为 3000， 需按照配置文件填写，这里是 8750
