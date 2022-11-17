@@ -29,7 +29,8 @@
 ### 下载挖矿文件
 
 ```bash
-git clone ...
+git clone https://github.com/boolnetwork/mining-scripts.git
+cd mining-scripts
 ```
 
 ### 激活 SGX 软件
@@ -113,6 +114,8 @@ docker run --net=host --rm -e RUST_LOG=warn,info=bnk_monitor  -v `pwd`/configs/m
 ```
 
 #### 启动中继服务
+
+若要成为中继人则需执行如下命令
 
 ```bash
 docker run --net=host --rm -e RUST_LOG=debug boolnetwork/bnk-relayer:latest -w=http://127.0.0.1:8720 -m=http://127.0.0.1:8740 -p=8750
