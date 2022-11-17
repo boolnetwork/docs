@@ -11,3 +11,5 @@
 ```bash
 docker run --net=host --rm -e RUST_LOG=debug boolnetwork/bnk-relayer:latest -w=http://127.0.0.1:8720 -m=http://127.0.0.1:8740 -p=8750
 ```
+
+启动 relayer 依赖于 monitor 和 watcher 服务，因此我们可以参考[如何运行隐私节点](/developer/tee)
