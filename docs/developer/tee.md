@@ -6,8 +6,10 @@
 
 ## 硬件要求
 
-::: tip
+:::tip
+
 隐私节点最重要的是 SGX 环境
+
 :::
 
 建议成为隐私节点的最小硬件环境如下：
@@ -35,8 +37,10 @@ cd mining-scripts
 
 ### 激活 SGX 软件
 
-::: tip
+:::tip
+
 可根据[Intel SGX processors](https://www.intel.com/content/www/us/en/support/articles/000028173/processors.html) 查看当前 cpu 是否支持 SGX
+
 :::
 
 ### 配置
@@ -79,8 +83,10 @@ docker-compose stop
 
 对于挖矿指令，我们可以拆解成如下服务：
 
-::: info
+:::info
+
 我们需要关注运行服务的数据持久化。 例子中已将关键数据目录做了磁盘映射。
+
 :::
 
 #### 启动节点服务

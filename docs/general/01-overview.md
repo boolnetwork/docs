@@ -46,8 +46,6 @@ BoolNetwork 区块链设计原则如下：
 :::tip 了解更多 📚
 
 [概述](https://github.com/boolnetwork/overview)  
-[BOOLNetwork 经济模型]  
-[BOOLNetwork 白皮书]  
-[BOOLNetwork 技术论文]
+[BOOLNetwork 技术论文](https://ieeexplore.ieee.org/document/9903072)
 
 :::

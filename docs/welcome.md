@@ -31,8 +31,8 @@ BOOLNetwork 的愿景是链接一切，为 Web3 构建一个横跨全球的可�
 
 作为持有者、验证者和开发人员，使用 BOOLNetwork 生态系统中的工具。
 
-[验证人]  
-[动态委员会]
+[验证人](/developer/validator)  
+[动态委员会](/developer/tee)
 
 ## 预览 BOOLNetwork
 

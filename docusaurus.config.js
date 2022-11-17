@@ -91,11 +91,11 @@ const config = {
               },
               {
                 label: "Discord",
-                href: "https://discord.com/invite/DVd4q9qq7a",
+                href: "https://discord.gg/DVd4q9qq7a",
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/bool_network_",
+                href: "https://twitter.com/Bool_Official",
               },
             ],
           },
