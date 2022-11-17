@@ -27,7 +27,7 @@ docker run boolnetwork/bnk-node:latest --validator --name "name on telemetry"
 ```
 
 :::tip
-如果你想运行一个 RPC 服务节点，让第三方应用程序连接 例如 Polkadot.js Apps，或者运行你自己的应用程序。 使用标志`--unsafe-rpc-external` 和`--unsafe-ws-external` 来运行完整的节点，这样才能让外部访问 RPC 端口。更多的详细信息通过`docker run --rm boolnetwork/bnk-node:latest --help`查看。
+如果你想运行一个 RPC 服务节点，让第三方应用程序连接 例如 Polkadot.js Apps，或者运行你自己的应用程序。 使用标志`--unsafe-rpc-external` 和`--unsafe-ws-external` 来运行完整的节点，这样才能让外部访问 RPC 端口。更多的详细信息通过`docker run --rm boolnetwork/bnk-node:latest --help`查看。 如果想后台运行，则使用标志`-d`。
 :::
 
 **节点启动信息**
