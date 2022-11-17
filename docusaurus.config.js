@@ -63,14 +63,19 @@ const config = {
         },
         items: [
           {
-            type: "localeDropdown",
-            position: "right",
-          },
-          {
             type: "doc",
             docId: "welcome",
             position: "left",
             label: "入门指南",
+          },
+          {
+            type: "localeDropdown",
+            position: "right",
+          },
+          {
+            href: "https://boolscan.com/",
+            label: "Explorer",
+            position: "right",
           },
           {
             href: "https://github.com/boolnetwork/docs",
