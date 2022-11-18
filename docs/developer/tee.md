@@ -51,11 +51,30 @@ cd mining-scripts
 
   - identity： 与 bool 链交互的账户，用于签名，包括设备注册、设备在线、奖励获取等。 该账户同时是设备的拥有者。
   - boot_nodes：p2p 网络的种子节点。
-  - peer_key：p2p 网络的通讯的身份。
 
 - monitor.toml
-  - private_key: 与目标链交互的签名账户，该账户将跨链的数据提交到目标链上。
+  - private_key: 与目标链交互的签名账户，该账户将跨链的数据提交到目标链上(relayer 服务)。
   - http_url： 目标链的 JSON RPC 接口，建议到 Infura 等节点服务提供商申请自己的账户。
+
+### identity 账户创建
+
+```bash
+docker run -it --rm boolnetwork/bnk-node:pre-release identity generate
+```
+
+输出
+
+```text
+Secret seed:      0x71235e1458ce9d140c8b8ded28ccc1e32e62c340aef51a65e1350a387dbe08a6
+Public key (hex): 0x0248e7f02dcc9f7061a090b67dede93d7381847e94955aee7996603d2225e9f77e
+Account ID:       0x34a5572cb21d34354e3091564d5edc7b791e9d5f
+```
+
+领取测试币
+
+```bash
+curl https://bot.bool.network/coin/0x34a5572cb21d34354e3091564d5edc7b791e9d5f
+```
 
 ### 命令
 
@@ -77,6 +96,12 @@ docker-compose logs
 
 ```bash
 docker-compose stop
+```
+
+#### 更新
+
+```bash
+docker-compose pull
 ```
 
 ### 单独启动服务
