@@ -1,39 +1,41 @@
-# 设备供应商
+# Device Provider
 
-提供TEE设备，享受基础奖励或申请加入隐私服务获取更多收益
+Provide TEE devices, enjoy basic rewards or apply to join the privacy service for more benefits
 
 ---
 
-1. 参考[开发者-运行隐私节点板块](/developer/tee)，运行隐私节点程序
+1. Reference [Run Privacy Node](/developer/tee), run a valid privacy node.
 
-2. 使用钱包账户登录 Dashboard
+2. Log in to Dashboard with your MetaMask wallet.
 
 ![connect_wallet](/img/testnet/connect_wallet.png)
 
-3. Dashboard-Device 页等待设备上线，上线后初始状态为“未上架”
+3. Wait for the device to register on the Dashboard-Device page. After registration， the initial status is "Unmount".
 
 ![dashboard_device](/img/testnet/dashboard_device.png)
 
-4. Dashboard-Provider 页创建 Provider
-- **质押**：Provider对自己的质押数
+4. Create a Provider on Dashboard-Provider Page
+
+- **Pledge**：The number of pledges the provider
 
 ![create_provider](/img/testnet/create_provider.png)
 
-5. 配置设备状态-绑定 PID
-- **绑定刚刚创建的 Provider ID**
+5. Configure Device Status - Binding PID
+
+- **Assign the device to the provider for unified management**
 
 ![set_provider](/img/testnet/set_provider.png)
 
-6. 配置设备状态-开始工作
+6. Configure Device Status - Start Working
 
-- **工作中的设备会自动向节点发送心跳在线证明，并以此享受基础奖励**
+- **The device at work will automatically send a heartbeat online proof to chain and enjoy the basic reward**
 
 ![start_minting](/img/testnet/start_minting.png)
 
-7. 配置设备状态-加入隐私服务
+7. Configure Device Status - Join Privacy Service
 
-- **加入隐私服务需设备为在线状态，加入后有资格申请成为委员会候选人**
+- **To join the privacy service, the device needs to be online, and you are eligible to apply to be a candidate for the committee after joining**
 
-- **加入隐私服务的设备仍需按时发送心跳在线证明**
+- **Devices that join the privacy service still need to send heartbeat online proof on time**
 
 ![start_service](/img/testnet/start_service.png)

@@ -1,49 +1,47 @@
-# 验证人与提名人
+# Validators and Nominators
 
-申请成为验证人参与出块或提名人进行质押来获取收益
+Apply to become a validator to participate in block production or nominator to pledge to obtain income
 
 ---
 
-## 加入提名人节点
+## Join the nominator
 
-1. 进入控制面板-节点板块，选择成为提名人（已成为验证人需先停止，然后重新选择成为提名人）
+1. Go to the `Control Panel` - `Node section` and select become a nominator (If you have become a validator, you need to stop first, and then re-select become a Nominator)
 
 ![join_node](/img/testnet/join_node.png)
 
-2. 选择被提名人（即验证人），最多可选择 16 个
+2. Select validators, maximum to 16
 
 ![select_validator](/img/testnet/select_validator.png)
 
-3. 设置质押数量及收入分配
-   - 继续质押：领取所获奖励时将资金继续质押到账户。
-   - 直接收益：领取所获奖励时所获奖励不继续质押，转到个人可领取账户。
+3. Set the number of pledges and earnings distribution
+   - Continue Pledge: Continue to pledge funds to the account when claiming the reward.
+   - Direct benefit: The rewards will not continue to be pledged, but transferred to the personal spendable account.
 
 ![set_nominator](/img/testnet/set_nominator.png)
 
-4. 配置完成即可创建成功，质押金额激活需等待一定周期，如果提名了多名验证人，
-   对每位验证人的质押分配将在质押金额激活时由[phragmen 算法](https://wiki.polkadot.network/docs/learn-phragmen)决定。
+4. Automatically activate the pledged deposit for some epoch. If multiple validators are nominated, the pledge allocation to each validator will be determined by the [phragmen Algorithm](https://wiki.polkadot.network/docs/learn-phragmen) when the pledge amount is activated.
 
 ![nominator_completed](/img/testnet/nominator_completed.png)
 
-## 加入验证人节点
+## Join the validator
 
-1. 参考[开发者-运行验证节点板块](/developer/validator)，运行相关节点
-2. 进入控制面板-节点板块，选择成为验证人（已成为提名人需先停止，然后选择成为验证人）
+1. Reference [Run Validator Node](/developer/validator), to run a valid node.
+2. Go to the `Control Panel` - `Node section` and select become a Validator (if you have become a nominator, you need to stop first, and then select 'Become a Validator)
 
 ![join_validator](/img/testnet/join_validator.png)
 
-3. 设置费率、是否允许第三方加入及 RotateKey：
+3. Set commission, allows third parties to join, and RotateKey:
 
-- **费率**: 分发奖励时验证人所收取的奖励比例，对于其他条件相同的验证人，
-  费率越低意味着提名人所获奖励越多；
-- **允许新提名**: 允许则第三方可成为该验证人的提名人，反之则不可；
-- **RotateKey**: 节点程序运行时提供，用于绑定账户及验证人节点关系。
-- **设置质押数量及收入分配**:
-  - 继续质押：所获奖励继续质押到账户，
-  - 直接收益：所获奖励不继续质押，转到个人可领取账户。
+- **Commission**: The percentage of the reward received by the validator when the reward is distributed. If the rewards are the same, the lower the commission means that the nominators will receive more rewards.
+- **Allowing third parties to join**: if permitted, a third party may become a nominator for the validator, but not otherwise.
+- **RotateKey**: it is used to bind the account and validate the node relationship.
+- **Set the amount of pledge and income distribution**:
+  - Continue Pledge: Continue to pledge funds to the account when claiming the reward.
+  - Direct benefit: The rewards will not continue to be pledged, but transferred to the personal spendable account.
 
 ![set_validator](/img/testnet/set_validator.png)
 
-4. 配置完成，创建成功。成为验证人需等待一定周期，被选中后不参与出块人会产生相应惩罚，扣除部分质押。
+4. To become a validator, you need to wait for some epoch. Once selected, those who do not participate in block production will be punished accordingly, and part of the pledge will be deducted.
 
 ![validator_completed](/img/testnet/validator_completed.png)

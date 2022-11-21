@@ -1,51 +1,52 @@
-# 概述
+# Overview
 
-BOOLNetwork 平台及其与 Polkadot 区块链的关系概述。
+An overview of the BOOLNetwork platform and its relationship to the Polkadot blockchain
 
 ---
 
-## BOOLNetwork 平台是什么?
+## What is the BOOLNetwork platform?
 
-BOOLNetwork 是一个注重去中心化的、安全的、隐私的全链互操作网络。该网络是无准入的，任何人都可以在其上构建去中心化的全链互操作协议如跨链桥，支持以稳定、高效以及低成本方式使全链（如异构链和预言机）互联互通。
+BOOLNetwork is a decentralized, secure, and private omnichain interoperability network. The network is permissionless, and anyone can build decentralized Omni protocols such as cross-chain bridges on it, allowing the omnichain (such as heterogeneous chain and oracle machine) to interact seamlessly in a stable, efficient, and low-cost manner.
 
-## BOL 是什么?
+## What is BOL?
 
-BOL 是支持 BOOLNetwork 区块链和生态系统增长和发展的平台原生资产。BOL 持有者可以获得奖励，参与算法共识和隐私共识，并对 BOOLNetwork 未来的提案进行投票。
+BOL is a native asset that helps the BOOLNetwork to build ecology and economic growth. BOL holders can earn rewards, participate in Algorithm consensus and Privacy consensus, and vote on BOOLNetwork's future proposals.
 
-## BOOLNetwork 的背景
+## Background of BOOLNetwork
 
-伴随着 web3.0 的发展，区块链技术也进入到了下一个阶段。为了能打破各个区块链之间的壁垒，更好的拓展区块链的边界，跨链技术得到了大家的重视，也有了较好的发展。
-区块链技术和商业模式还处于早期的探索阶段，目前不同区块链项目在信息和价值互通技术上互操作性不足，无法有效进行商业互信协同，各个区块链项目成为一座座信任无法相互传递的孤岛，区块链要跨越到真正的价值互联网，承担传递信任的使命，开启万链互联时代，需要一种通用、高效、安全的区块链跨链商业协作链接网关。
-如何解决区块链的价值孤岛问题，实现不同的区块链平台之间的资产流转、信息互通、应用协同以及用户共享成为当前区块链发展最重要的问题之一，但是区块链跨链解决方案的发 展还处于非常早期的阶段，虽然已经有很多项目在探索跨链解决方案，专注于解决区块链的互操性问题，但是在通用性、安全性上都有待提升。
+With the development of web3.0, blockchain technology has entered the next stage. To break the barriers between various blockchains and better expand the boundaries of blockchains, cross-chain technology has attracted enormous attention and has also made great progress.
 
-## BOOLNetwork 概述
+Blockchain technology and business models are still in the early stage. At present, different blockchain projects have insufficient interoperability in information and value transfer, and cannot effectively carry out business mutual trust and collaboration. Each blockchain project has become an information silo and cannot trust each other. The blockchain must leap over to the real value Internet, undertake the mission of transmitting trust, and open the era of interconnection. A universal, efficient and secure cross-chain commercial gateway is needed.
 
-BoolNetwork 与 Polkadot 都是基于 substrate 框架设计，虽然 Polkadot 是异构跨链，但局限于 substrate 开发平台，对于非 substrate 开发的现有区块链，Polkadot 引入转接桥方案，弥补非生态内跨链的不足。而 BoolNetwork 的跨链方案基于公证人方式，而无需再引入转接桥。BoolNetwork 强大的跨链机制使得它既可以作为转接桥，成为 Polkadot 的外部系统，成为 Polkadot 生态成型、拓展和扩张的基础，同时也可以完全独立运行，成为可以支持跨链的开源公链。
+How to solve the information silo problem of the blockchain and realize the asset circulation, information exchange, application collaboration and user sharing between different blockchain platforms has become one of the most important issues in the current blockchain development. However, blockchain cross-chain development is still at a very early stage. Although there are already many projects exploring cross-chain solutions and focusing on solving the interoperability of the blockchain, there is still plenty of room for improvement in terms of versatility and security.
 
-## BoolNetwork 的设计原则和特性
+## BOOLNetwork and Polkadot
 
-BoolNetwork 采用了 Substrate 框架以及零知识证明技术实现了异构区块链之间的数据、价值安全交换，是一套高性能、高可互操作性、高度安全性的跨链底层平台。
-BoolNetwork 区块链设计原则如下：
+Both BOOLNetwork and Polkadot are designed based on the substrate framework. Although Polkadot is a heterogeneous cross-chain, the cross-chain functionality is limited to the substrate development platform. For existing blockchains not developed by substrate, Polkadot introduces a transfer bridge solution to make up for it. The cross-chain architecture of BoolNetwork is based on the notary technique, without the need to introduce a transfer bridge. BOOLNetwork is so powerful that it could be used as a transfer bridge, an external system of Polkadot, or as the foundation for extending Polkadot's ecosystem. Furthermore, it can also run completely independently, becoming an open-source public chain that can support cross-chain.
 
-1. 高性能。
+## Design Principles and Features of BOOLNetwork
 
-   通过 NPOS 共识机制，以出块与最终确定分离的共识计算，从而提升了计算性能，可扩展至至少每秒数千次(TPS)。
+BOOLNetwork uses Substrate Framework and Zero-Knowledge Proof Technology to achieve the secure exchange of data and value between heterogeneous blockchains. It is a high-performance, highly interoperable, and highly secure cross-chain underlying platform. The design principles of the BOOLNetwork blockchain are as follows:
 
-2. 高通用性
+1. High performance.
 
-   通过底层解耦，使应用链在无须做任何要求、约束或限制的情况下，通过异构的适配即可实现同其他区块链的信息或价值的互换。
+   Parallel computing and parallel storage are adopted. Through the NPOS consensus mechanism, consensus computing is performed in a multi-task parallel manner. Thereby improving the computing performance, which can be expanded to at least thousands of times per second (TPS).
 
-3. 高安全性
+2. High versatility
 
-   高度优化的零知识证明和跨链通讯协议使异构跨链通讯安全与可靠。
+   Through the decoupling of the infrastructure layer, the application chain can realize the exchange of information or value with other blockchains through heterogeneous adaptation without any requirements, constraints or restrictions.
 
-4. 高可互操作性
+3. High security
 
-   BOOLNetwork 的设计目的之一就是让区块链上的 DAPP 和智能合约可以无缝地与其他链上的数据或资产进行交易，基于 TSS 的门限签名技术，使 BOOLNetwork 具备强大的跨链互操作性，可将 ETH, BSC 等资产以去中心化的方式相互转移，当接入 BOOLNetwork 的区块链越多，BOOLNetwork 的互操作性就越强，当所有的区块链都能链接互通时，会带来更好的资本、更好的用户体验。
+   Highly optimized zero-knowledge proofs and cross-chain communication protocols make heterogeneous cross-chain communication safe and reliable.
 
-:::tip 了解更多 📚
+4. High interoperability
 
-[概述](https://github.com/boolnetwork/overview)  
-[BOOLNetwork 技术论文](https://ieeexplore.ieee.org/document/9903072)
+   One of the design purposes of BOOLNetwork is to allow DAPP and smart contracts on the blockchain to seamlessly trade with data or assets on other chains. Based on the threshold signature technology of TSS, BOOLNetwork has strong cross-chain interoperability, which can transfer ETH, BSC, and other assets to each other in a decentralized way. When more blockchains are connected to BOOLNetwork, the stronger interoperability of BOOLNetwork. When all blockchains can interact seamlessly, it will bring better capital and a better user experience.
+
+:::tip Learn more 📚
+
+[Overview](https://github.com/boolnetwork/overview)  
+[BOOLNetwork Technical Papers](https://ieeexplore.ieee.org/document/9903072)
 
 :::

@@ -23,8 +23,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "zh",
-    locales: ["zh", "en"],
+    defaultLocale: "en",
+    locales: ["en", "zh"],
   },
 
   presets: [
@@ -35,6 +35,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
+          path: "./docs/",
+          sidebarCollapsible: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/boolnetwork/docs",
@@ -66,7 +68,7 @@ const config = {
             type: "doc",
             docId: "welcome",
             position: "left",
-            label: "入门指南",
+            label: "Welcome",
           },
           {
             type: "localeDropdown",
@@ -88,7 +90,7 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "社区",
+            title: "Community",
             items: [
               {
                 label: "Telegram",
@@ -105,7 +107,7 @@ const config = {
             ],
           },
           {
-            title: "更多",
+            title: "More",
             items: [
               {
                 label: "GitHub",

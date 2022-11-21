@@ -4,48 +4,48 @@ sidebar_position: 1
 slug: /
 ---
 
-# 入门指南
+# Welcome
 
-BOOLNetwork 的愿景是链接一切，为 Web3 构建一个横跨全球的可信网络，做 Web3 的 TCP/IP 协议。
+The vision of BOOLNetwork is to connect everything, build a trusted network across the world for Web3, and be the TCP/IP protocol of Web3.
 
 ---
 
-[BOOLNetwork](https://bool.network/) 是一个开放、分布式、安全的数据公证平台，它是最底层的跨链设施，解决了现有的公证人跨链设施不够开放（去中心化）、操作门槛比较高、无法跨链合约调用等痛点。可以说 BOOLNetwork 是唯一一个同时支持合约跨链互调、预言机数据和异构链的跨链基础设施。
+[BOOLNetwork](https://bool.network/) is an open, distributed, and secure data notary platform. It is the LayerBase infrastructure, which solves the pain points of the existing notary cross-chain facilities such as insufficient openness (decentralization), relatively high operational threshold, and inability to call cross-chain contracts. BOOLNetwork is the LayerBase infrastructure that supports heterogeneous cross-chain interoperability, and oracle at the same time.
 
-:::tip 反馈
+:::tip feedback
 
-如果你有更好的建议，请提出[问题](https://github.com/boolnetwork/docs/issues/new).
+If you have a better suggestion, please request a [question](https://github.com/boolnetwork/docs/issues/new).
 
 :::
 
-## 介绍 BOOLNetwork
+## Introducing BOOLNetwork
 
-通过我们的愿景、白皮书和资源的概述，学习 BOOLNetwork。
+Learn about BOOLNetwork with an overview of our vision, whitepaper, and resources.
 
-[官网](https://bool.network/)  
-[概述](/general/overview)  
-[术语](/general/glossary)  
+[Website](https://bool.network/)  
+[Overview](/general/overview)  
+[Glossary](/general/glossary)  
 [GitHub](https://github.com/boolnetwork)
 
-## 使用 BOOLNetwork
+## Using BOOLNetwork
 
-作为持有者、验证者和开发人员，使用 BOOLNetwork 生态系统中的工具。
+As a holder, validator and developer, use the tools in the BOOLNetwork ecosystem.
 
-[验证人](/developer/validator)  
-[动态委员会](/developer/tee)
+[Validator](/developer/validator)  
+[Dynamic Committee](/developer/tee)
 
-## 预览 BOOLNetwork
+## Preview BOOLNetwork
 
-[钱包](/tools/wallet)  
-[浏览器](https://boolscan.com/)
+[Wallet](/tools/wallet)  
+[Explorer](https://boolscan.com/)
 
-## SDK & 接口
+## SDK & Interface
 
-[接口](/developer/api/storage)  
+[Interface](/developer/api/storage)  
 [Polkadotjs](https://polkadot.js.org/docs/)
 
-:::tip 寻求帮助 💬
+:::tip Ask for help 💬
 
-需要任何帮助? 到[Telegram](https://t.me/+qS6FYIBzZXY2NmQx).
+Need any help? Go to [Telegram](https://t.me/+qS6FYIBzZXY2NmQx).
 
 :::

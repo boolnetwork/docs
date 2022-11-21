@@ -1,68 +1,68 @@
-# 运行隐私节点
+# Run as Privacy Node
 
-如何成为 BOOLNetwork 的隐私节点，参与隐私共识。
+How to become a privacy node of BOOLNetwork and participate in privacy consensus
 
 ---
 
-## 硬件要求
+## Hardware requirements
 
 :::tip
 
-隐私节点最重要的是 SGX 环境
+Privacy Nodes Must run in SGX Environment
 
 :::
 
-建议成为隐私节点的最小硬件环境如下：
+The Minimum Hardware Environments recommended to be Privacy Nodes are as follows:
 
 - OS: Ubuntu 18.04
-- CPU：至少 8 核 （SGX 必须支持）
-- RAM：至少 64G 内存，越大越好
-- 存储： 至少 2T SSD/HHD，越大越好
-- 网络： 独立 IP，至少 20M 带宽，越大越好。
+- CPU: At least 8 cores (SGX must support)
+- RAM: at least 64G memory, the bigger the better
+- Storage: at least 2T SSD /HHD, the bigger the better
+- Network: Independent IP, at least 20M bandwidth, the bigger the better.
 
-|            | CPU                                                                               | 主板               | 内存                  | 固态硬盘                                           | 网络环境                                                                   | 操作系统     |
-| ---------- | --------------------------------------------------------------------------------- | ------------------ | --------------------- | -------------------------------------------------- | -------------------------------------------------------------------------- | ------------ |
-| 要求       | 1.支持 SGX（Software Guard Extensions;2.Intel i5 七代及以上; 、3.核心数八核及以上 | BIOS 支持开启 SGX1 | 总容量 >= 64G         | 1.存储链全节点数据，考虑数据持续增长，建议 2T 以上 | 1.带宽 >= 20M 2.全节点对网络同步要求较高，同时对外提供服务，实时性要求高。 | Ubuntu 18.04 |
-| 基础推荐   | intel 酷睿 i5-9600KF or intel 酷睿 i7-7700K or intel 酷睿 i7-10700                | BIOS 支持开启 SGX1 | 2 条 32G DDR4 的内存  | 2T m.2 固态                                        | 20M 带宽                                                                   | Ubuntu 18.04 |
-| 中级版推荐 | intel 酷睿 i5-9600KF or intel 酷睿 i7-7700K or intel 酷睿 i7-10700                | BIOS 支持开启 SGX1 | 4 条 32GG DDR4 的内存 | 2T m.2 固态                                        | 20M 带宽                                                                   | Ubuntu 18.04 |
+|             | CPU                                                                                                             | Motherboard                      | RAM                     | Storage                                                                                                            | Network       | OS           |
+| ----------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------- | ------------ |
+| requirement | 1. Support SGX (Software Guard Extensions; 2.Intel i5 7th generation or later; 3. Number of cores Eight or more | The BIOS supports  enabling SGX1 | Total capacity >= 64 GB | The data is stored on all nodes in the storage chain. If the data continues to grow, more than 2 TB is recommended | 20M Bandwidth | Ubuntu 18.04 |
+| basic       | intel Core i5-9600KF or intel Core i7-7700K or intel Core i7-10700                                              | BIOS support SGX1                | two 32GB DDR4 memory    | 2T m.2 SSD                                                                                                         | 20M Bandwidth | Ubuntu 18.04 |
+| middle      | intel Core i5-9600KF or intel Core i7-7700K or intel Core i7-10700                                              | BIOS support SGX1                | four 32GG DDR4 memory   | 2T m.2 SSD                                                                                                         | 20M Bandwidth | Ubuntu 18.04 |
 
-## 快速启动
+## Quick start
 
-### 下载挖矿文件
+### Download scripts
 
 ```bash
 git clone https://github.com/boolnetwork/mining-scripts.git
 cd mining-scripts
 ```
 
-### 激活 SGX 软件
+### Activate SGX software
 
 :::tip
 
-可根据[Intel SGX processors](https://www.intel.com/content/www/us/en/support/articles/000028173/processors.html) 查看当前 cpu 是否支持 SGX
+According to the [Intel SGX processors](https://www.intel.com/content/www/us/en/support/articles/000028173/processors.html) to see if the current CPU supports SGX
 
 :::
 
-### 配置
+### Configure
 
-配置 configs 目录中各服务启动参数，大多参数可以直接使用默认值，需要特别注意如下几个参数，按实际情况配置：
+Configure each service startup parameter in the configs directory. Most of the parameters can directly use the default values. You need to pay special attention to the following parameters and configure them according to the real condition:
 
 - watcher.toml
 
-  - identity： 与 bool 链交互的账户，用于签名，包括设备注册、设备在线、奖励获取等。 该账户同时是设备的拥有者。
-  - boot_nodes：p2p 网络的种子节点。
+  - identity： The account that interacts with the BOOLNetwork blockchain and is used for signing, including device registration, device online, reward acquisition, etc. The account is also the owner of the device.
+  - boot_nodes：Bootstrap node for p2p networks.
 
 - monitor.toml
-  - private_key: 与目标链交互的签名账户，该账户将跨链的数据提交到目标链上(relayer 服务)。
-  - http_url： 目标链的 JSON RPC 接口，建议到 Infura 等节点服务提供商申请自己的账户。
+  - private_key: The account that interacts with the target chain and submits cross-chain data to the target chain.
+  - http_url： The target chain JSON RPC interface, it is recommended to apply for your account with Blockchain service providers such as Infura, and Alchemy.
 
-### identity 账户创建
+### Create Identity
 
 ```bash
 docker run -it --rm boolnetwork/bnk-node:pre-release identity generate
 ```
 
-输出
+Output:
 
 ```text
 Secret seed:      0x71235e1458ce9d140c8b8ded28ccc1e32e62c340aef51a65e1350a387dbe08a6
@@ -70,90 +70,90 @@ Public key (hex): 0x0248e7f02dcc9f7061a090b67dede93d7381847e94955aee7996603d2225
 Account ID:       0x34a5572cb21d34354e3091564d5edc7b791e9d5f
 ```
 
-领取测试币
+Get testnet coin:
 
 ```bash
 curl https://bot.bool.network/coin/0x34a5572cb21d34354e3091564d5edc7b791e9d5f
 ```
 
-### 命令
+### Command
 
-通过 docker-compose 启动。
+Start the service via docker-compose.
 
-#### 开始挖矿
+#### Start running
 
 ```bash
 docker-compose up -d
 ```
 
-#### 查看挖矿状态
+#### View run logs
 
 ```bash
 docker-compose logs
 ```
 
-#### 停止挖矿
+#### Stop running
 
 ```bash
 docker-compose stop
 ```
 
-#### 更新
+#### Update images
 
 ```bash
 docker-compose pull
 ```
 
-### 单独启动服务
+### Start the service singly
 
-对于挖矿指令，我们可以拆解成如下服务：
+For the run instruction, we can break it down into the following services:
 
 :::info
 
-我们需要关注运行服务的数据持久化。 例子中已将关键数据目录做了磁盘映射。
+We need to focus on the data persistence of the running service. In the example, the key data directory has been disk mapped.
 
 :::
 
-#### 启动节点服务
+#### Start the BOOLNetwork Node service
 
 ```bash
 docker run --net=host --rm -e RUST_LOG=info -v `pwd`/data:/data boolnetwork/bnk-node:latest --unsafe-ws-external
 ```
 
-#### 启动数据库服务
+#### Start the database service
 
 ```bash
 docker run --net=host --rm -e RUST_LOG=info  -v `pwd`/configs/db.toml:/bnk/db.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-database:latest
 ```
 
-#### 启动观察者服务
+#### Start the watcher service
 
 ```bash
 docker run --net=host --rm -e RUST_LOG=info  -v `pwd`/configs/watcher.toml:/bnk/watcher.toml boolnetwork/bnk-watcher:latest
 ```
 
-#### 启动 SGX 私钥服务
+#### Start SGX Private Key Service
 
 ```bash
 docker run --rm --net=host --device /dev/sgx/enclave --device /dev/sgx/provision -v `pwd`/configs/key.toml:/bnk/key.toml -p 9701:9701  -e RUST_LOG=info boolnetwork/bnk-sgx-key-server
 ```
 
-#### 启动链监视服务
+#### Start the chain monitoring service
 
 ```bash
 docker run --net=host --rm -e RUST_LOG=warn,info=bnk_monitor  -v `pwd`/configs/monitor.toml:/bnk/monitor.toml -v `pwd`/data:/bnk/data boolnetwork/bnk-monitor:latest
 ```
 
-#### 启动中继服务
+#### Start the relay service
 
-若要成为中继人则需执行如下命令
+To become a relay, you need to execute the following command
 
 ```bash
 docker run --net=host --rm -e RUST_LOG=debug boolnetwork/bnk-relayer:latest -w=http://127.0.0.1:8720 -m=http://127.0.0.1:8740 -p=8750
 ```
 
-参数说明：
+Parameter description:
 
-- `-w`：观察者服务的访问链接。
-- `-m`: 链监视服务的访问链接。
-- `-p`: 默认值为 3000， 需按照配置文件填写，这里是 8750
+- `-w`：Access link for the observer service.
+- `-m`: The access link for the chain monitoring service.
+- `-p`: The default value is `3000`, which needs to be filled in according to the configuration file, here is `8750`

@@ -1,31 +1,33 @@
-# 跨链桥供应商
+# Cross-chain bridge provider
 
-提供跨链桥用于完成跨链需求获取收益
+Earn cross-chain fees
 
 ---
 
-1. 首先进入并登录 Dsahboard-Committee 板块，创建委员会(1 个跨链桥至少需要 2 组委员会)
-![create_committee](/img/testnet/create_committee.png)
+1. First enter and login to the Dashboard-Committee section to create a committee (one cross-chain bridge requires at least two committees)
+   ![create_committee](/img/testnet/create_committee.png)
 
-2. 设置成员数及委员会副本数量
-- **成员数**: 委员会单个副本的成员数，成员越多该委员会越安全，但签名时间会变长
-- **委员会副本数**：委员会不同副本的签名权益相同，彼此为良性竞争关系
-- 
-![set_committee](/img/testnet/set_committee.png)
+2. Set the number of members and the number of committee copies
 
-3. 设置完成后提交即可成功创建委员会
-- **委员会创建需要一定时间，显示公钥即表示该委员会创建成功，可用于部署跨链桥**
+- **Number of members**: The number of members the committee, the more members the more secure the committee, but the longer the signing time.
+- **Number of committee copies**：different copies of the committee have the same signature rights and are in good competition with each other.
+
+- ![set_committee](/img/testnet/set_committee.png)
+
+3. Click the submit button and sign to create the committee
+
+- **It cost some time to create a committee. Displaying the public key means that the committee is successfully created and can be used to deploy cross-chain bridges**
 
 ![committee_completed](/img/testnet/committee_completed.png)
 
-4. 切换到Dsahboard-Bridge板块，创建跨链桥。（Token 为跨链兑换币种，链选择多条部署即可相互跨转，选择）
+4. Switch to the Dashboard-Bridge section to create a cross-chain bridge.
 
 ![create_bridge](/img/testnet/create_bridge.png)
 
-5. 选择对应链以及委员会进行跨链合约部署
+5. Select corresponding chains and committees for cross-chain contract deployment
 
 ![deploy_contract](/img/testnet/deploy_contract.png)
 
-6. 部署完成后点击提交，跨链桥创建完成
+6. After the deployment is completed, click Submit to complete the cross-chain bridge creation
 
 ![bridge_completed](/img/testnet/bridge_completed.png)
