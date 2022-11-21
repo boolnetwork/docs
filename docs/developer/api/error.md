@@ -9,131 +9,128 @@ Some pallet error about bool network
 - **[committee](#committee)**
 - **[staking](#staking)**
 
-
-
 ## facility
 
-### InvalidReport => 无效的设备注册报告
+### InvalidReport => Invalid device registration report
 
-### InvalidSignature => 签名错误
+### InvalidSignature => Signature error
 
-### NotRegister => 设备未注册
+### NotRegister => The device is not registered
 
-### LowVersion => 版本过低  
+### LowVersion => The version is too early
 
-### DIdentityExist => 设备已绑定报告
+### DIdentityExist => A report has been bound to the device
 
-### HashExist => 哈希重复
+### HashExist => The transaction hash repetition
 
-### DeviceExist => 设备已注册
+### DeviceExist => The device has been registered
 
-### NotOwner => 所有权错误
+### NotOwner => Operator ownership error
 
-### DeviceWorking => 设备已工作
+### DeviceWorking => The device is working
 
-### InvalidVersion => 版本错误
+### InvalidVersion => invalid device version
 
 ## mining
 
-### NotProvider => 无效供应商id
+### NotProvider => Invalid provider Id
 
-### InvalidIdentity => 设备所有权错误
+### InvalidIdentity => device ownership error
 
-### NoDevice => 供应商未绑定该设备
+### NoDevice => The provider does not bind the device
 
-### DeviceAlreadyBind => 供应商已绑定该设备
+### DeviceAlreadyBind => The Provider has bound the device
 
-### NotEnoughBalance => 可用余额不足
+### NotEnoughBalance => Insufficient available balance
 
-### InvalidWithdrawalAmount => 赎回金额过大
+### InvalidWithdrawalAmount => Redemption amount is too large
 
-### PledgeOverFlow => 超出供应商质押容量上限
+### PledgeOverFlow => The provider's pledge capacity is exceeded
 
-### StakeInfoNotExist => 未质押该供应商
+### StakeInfoNotExist => The provider was not pledged
 
-### NoRewardToClaim => 没有可领取的奖励
+### NoRewardToClaim => There are no claimable rewards
 
-### InvalidCapacity => 质押设置量过小
+### InvalidCapacity => The amount of pledge setting is too small
 
-### StakingUsrOverflow => 供应商被质押人数超过上限
+### StakingUsrOverflow => The number of provider pledged exceeded the limit
 
-### CoolDown => 赎回奖励操作冷却中
+### CoolDown => Redemption reward operation cooldown
 
-### InvalidSession => 心跳周期错误
+### InvalidSession => The proof of heartbeat cycle error
 
-### InvalidIndex => 索引错误
+### InvalidIndex => Error of index
 
-### ProviderInvalidStatus => 供应商状态错误
+### ProviderInvalidStatus => provider status error
 
-### DeviceInvalidStatus => 设备状态错误
+### DeviceInvalidStatus => Device status error
 
-### RetainMintPledge => 供应商赎回金额过大
+### RetainMintPledge => The provider redemption amount is too large
 
-### InvalidPids => 无效的供应商id
+### InvalidPids => Invalid vendor id
 
 ## committee
 
-### InvalidParams => 参数错误
+### InvalidParams => Committee parameter error
 
-### InvalidChannelState => 跨链桥状态错误
+### InvalidChannelState => The status of the cross-chain bridge is incorrect
 
-### InvalidCommitteeState => 委员会状态错误
+### InvalidCommitteeState => Committee status error
 
-### NotMember => 非委员会成员
+### NotMember => Non-committee Member
 
-### MissionStateNormal => 跨链签名任务状态正常
+### MissionStateNormal => The cross-chain signature task status is normal
 
-### NotChannelCreator => 跨链器所有权错误
+### NotChannelCreator => Cross-chain ownership error
 
-### NotCommitteeCreator => 委员会所有权错误
+### NotCommitteeCreator => Committee ownership error
 
-### RegistersNotEnough => 设备加入服务数不足
+### RegistersNotEnough => The number of devices added to the service is insufficient
 
-### AddressExist => 委员会已绑定合约地址
+### AddressExist => The committee has bound the contract address
 
-### CandidateExist => 委员会候选人重复
+### CandidateExist => Committee candidates repeat
 
-### InvalidForkId => 无效的副本id
+### InvalidForkId => Invalid committee copy id
 
-### DuplicateChange => 换届报告重复
+### DuplicateChange => The transition report is repeated
 
-### IncorrectCandidate => 委员会候选人已满
+### IncorrectCandidate => The committee is full of candidates
 
-### CommitteeAlreadyUsed => 委员会已绑定跨链桥
+### CommitteeAlreadyUsed => The council has bound the cross-chain bridge
 
-### IncorrectCid => 无效的委员会id
+### IncorrectCid => Invalid committee id
 
-### DeviceNotServing => 设备未加入服务
+### DeviceNotServing => The device is not added to the service
 
-### InvalidDeviceState => 设备状态错误
+### InvalidDeviceState => Device status error
 
-### MissionTimeout => 签名任务已超时
+### MissionTimeout => The signature task timed out
 
 ## staking
 
-### AlreadyBonded => 虚拟账户已绑定
+### AlreadyBonded => The virtual account has been bound
 
-### AlreadyPaired => 虚拟账户已存在
+### AlreadyPaired => The virtual account already exists
 
-### InsufficientValue => 质押数目过低
+### InsufficientValue => The number of pledges is too low
 
-### BadState => 无效账户
+### BadState => Invalid account
 
-### CallNotAllowed => 候选人选举期，无法操作
+### CallNotAllowed => Candidate election period, unable to operate
 
-### NotStash => 虚拟账户未创建
+### NotStash => The virtual account is not created
 
-### NotController => 虚拟账户所有权错误
+### NotController => Incorrect virtual account ownership
 
-### NoMoreChunks => 质押减少次数已达上限
+### NoMoreChunks => The number of pledge reductions has reached its limit
 
-### EmptyTargets => 验证人列表为空
+### EmptyTargets => The validator list is empty
 
-### TooManyTargets => 验证人列表过长
+### TooManyTargets => The authenticator list is too long
 
-### BadTarget => 该验证人不允许被提名
+### BadTarget => The verifier is not allowed to be nominated
 
-### InvalidEraToReward => 无效的奖励周期
+### InvalidEraToReward => Invalid reward cycle
 
-### AlreadyClaimed => 该周期奖励已领取
-
+### AlreadyClaimed => This cycle award has been received
