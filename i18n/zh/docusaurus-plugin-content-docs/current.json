@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.General": {
+    "message": "基础知识",
+    "description": "The label for category General in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.General.link.generated-index.title": {
+    "message": "基础知识",
+    "description": "The generated-index page title for category General in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.General.link.generated-index.description": {
+    "message": "快速学习BOOLNetwork最重要的概念",
+    "description": "The generated-index page description for category General in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Developer": {
+    "message": "开发者",
+    "description": "The label for category Developer in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tools": {
+    "message": "工具",
+    "description": "The label for category Tools in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Testnet": {
+    "message": "测试网",
+    "description": "The label for category Testnet in sidebar tutorialSidebar"
+  }
+}

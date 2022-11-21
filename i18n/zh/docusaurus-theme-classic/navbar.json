@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "BOOL 文档",
+    "description": "The title in the navbar"
+  },
+  "item.label.Welcome": {
+    "message": "入门指南",
+    "description": "Navbar item with label Welcome"
+  },
+  "item.label.Explorer": {
+    "message": "浏览器",
+    "description": "Navbar item with label Explorer"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
