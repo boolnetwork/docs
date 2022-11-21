@@ -1,36 +1,36 @@
-# 运行验证节点
+# Run Validator Node
 
-如何成为 BOOLNetwork 的验证节点，参与算法共识。
+How to become a validator node of BOOLNetwork and participate in Algorithm consensus.
 
 ---
 
-## 前言
+## Introduction
 
-BOOLNetwork 上运行的验证节点，不仅要为自己的利益负责，还要为现任提名人的利益负责，如果验证节点作恶被惩罚了，那么提名人也要连带责任，奖励和惩罚机制详细参考 NPos。验证节点非常有价值，它们保证网络的安全性。
+The validator node running on BOOLNetwork is not only responsible for its interests, but also for the interests of the nominators. If the validator node is punished for doing evil, the nominators should also be punished. Refer to NPos for details on the reward and punishment mechanism. The validator node is very valuable, they ensure the security of the network.
 
-### 需要质押多少 BOL
+### How much BOL do you need to pledge?
 
-质押是必要的，目前在测试网阶段，只要少量从水龙头领取的代币。
+Pledging is necessary, currently in the testnet stage, with only a small amount of tokens collected from the faucet.
 
-## 启动节点
+## Startup Node
 
 :::tip
-官方未开源代码，因此不支持从源代码编译二进制。
+The official source code is not open, so compiling binary from the source code is not supported.
 :::
 
-### 使用 Docker
+### Using Docker
 
-Docker 运行是现在唯一方案，可以通过官方的镜像启动节点。你可以用一个简单的单行命令来完成:
+Docker is the only solution right now, and Node can be started via the official images. You can do it with a simple command:
 
 ```bash
 docker run boolnetwork/bnk-node:latest --validator --name "name on telemetry"
 ```
 
 :::tip
-如果你想运行一个 RPC 服务节点，让第三方应用程序连接 例如 Polkadot.js Apps，或者运行你自己的应用程序。 使用标志`--unsafe-rpc-external` 和`--unsafe-ws-external` 来运行完整的节点，这样才能让外部访问 RPC 端口。更多的详细信息通过`docker run --rm boolnetwork/bnk-node:latest --help`查看。 如果想后台运行，则使用标志`-d`。
+If you want to run an RPC service Step, let third-party apps connect, such as Polkadot.js Apps, or run your own. Use the flags`--unsafe-rpc-external` and `--unsafe-ws-external` to run the full Node, which allows external access to the RPC port. See more details at `docker run --rm boolnetwork/bnk-node:latest --help`. If you want to run in the background, use the flag `-d`.
 :::
 
-**节点启动信息**
+**Node start information**
 
 ```text
 2022-10-26 08:58:09 BoolNetwork Node
@@ -48,7 +48,7 @@ docker run boolnetwork/bnk-node:latest --validator --name "name on telemetry"
 2022-10-26 08:58:09 🏷 Local node identity is: 12D3KooWPf5RWmdJfPEX3gvRqq6B9TAeHCsafVw7odmWcdNxavmh
 ```
 
-:::info 节点同步例子
+:::info Node synchronization example
 
 ```text
 2022-10-26 09:07:03 ✨ Imported #163667 (0xb005…ad0b)
@@ -62,36 +62,36 @@ docker run boolnetwork/bnk-node:latest --validator --name "name on telemetry"
 
 :::
 
-#### 设置节点密钥
+#### Set Node Key
 
-要成为有效的验证人还需要设置[Session Keys](https://wiki.polkadot.network/docs/learn-keys#session-keys)。 通过如下步骤：
+To be a valid validator you also need to set [Session Keys](https://wiki.polkadot.network/docs/learn-keys#session-keys). Follow these steps：
 
-1. 进入 docker 环境
+1. Enter the docker environment
 
 ```bash
 docker exec --it `CONTAINER_ID` bash
 ```
 
-2. 在 docker 内执行命令行获取 Session Keys
+2. Get `Session Keys` from the command line in docker
 
 ```bash
 curl -X POST http://127.0.0.1:9933 -H "Content-type: application/json" -d '{"id":1,"jsonrpc":"2.0","method":"author_rotateKeys","params":[]}'
 ```
 
-你将得到如下：
+You will get the following：
 
 ```text
 {"jsonrpc":"2.0","result":"0x963d40e26c1d69acf3f75f96cd7782576382713b650d2ea81f5c8dbeb3797e1f17df3a8ab0d3a2dc3218972fdebe47a4463523ae1bbc0a6c91f3b33ace76c0eb","id":1}
 ```
 
 :::tip
-请务必保存输出的公钥集`0x96***0eb`，为后续操作准备。
+Be sure to save the output public key set `0x96***0eb` for subsequent operations。
 :::
 
-## 硬件要求
+## Hardware requirements
 
-- OS: Ubuntu 18.04 或者 Linux Kernel 5.16 .
-- CPU：至少 4 核
-- 内存：至少 16G 内存，越大越好
-- 存储： 至少 1T SSD/HHD，越大越好
-- 网络： 独立 IP，至少 20M 带宽，越大越好。
+- OS: Ubuntu 18.04 or Linux Kernel 5.16.
+- CPU At least 4 cores
+- Memory: At least 16G memory, the bigger the better
+- Storage: at least 1T SSD /HHD, the bigger the better
+- Network: Independent IP, at least 20M bandwidth, the bigger the better.

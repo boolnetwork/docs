@@ -1,15 +1,15 @@
-# 运行中继人服务
+# Run Relayer Service
 
-如何成为 BOOLNetwork 的中继人服务，参与跨链。
+How to become a relayer service of BOOLNetwork and participate in cross-chain.
 
 ---
 
-中继人负责将跨链交易提交到目标链，他需要能感知到目标链和原始链的状态，同时还能拿到 bool 链上的跨链交易的签名。
+The relayer is responsible for submitting the cross-chain transaction to the target chain. He needs to be able to perceive the state of the target chain and the original chain, and at the same time get the signature of the cross-chain transaction on the bool chain.
 
-## 启动
+## start
 
 ```bash
 docker run --net=host --rm -e RUST_LOG=debug boolnetwork/bnk-relayer:latest -w=http://127.0.0.1:8720 -m=http://127.0.0.1:8740 -p=8750
 ```
 
-启动 relayer 依赖于 monitor 和 watcher 服务，因此我们可以参考[如何运行隐私节点](/developer/tee)
+Startup relayer depends on `monitor` and `watcher`，so we can refer to[Run Privacy Node](/developer/tee)

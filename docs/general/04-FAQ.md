@@ -1,45 +1,47 @@
 # FAQ
 
-一些最常被问到的问题。
+Some of the most frequently asked questions.
 
 ---
 
-## 技术
+## Technology
 
-### BOOLNetwork 的桥与其他桥有什么区别？
+### What is the difference between BOOLNetwork's bridge and others?
 
-BOOLNetwork 本质是另一个采用 TEE 节点网络作为外部验证者的 AMB 桥项目。 为保证跨链资产安全性，BOOLNetwork 在此基础上做了增加了 TEE 节点的轮值和匿名选举机制。不仅让外部攻击难上加难，而且几乎可以杜绝内部串谋。
+BOOLNetwork is another AMB bridge project that uses TEE network as an external validator. To ensure the security of cross-chain assets, BOOLNetwork has added TEE node rotation and anonymity election mechanism. Not only makes external attacks more difficult, but also almost eliminates internal collusion.
 
-### MPC 技术在本产品在怎么被应用的？
+### How is MPC technology used in this product?
 
-我们的动态委员会应用了 MPC 技术。管理一个委员会的所有节点通过 MPC 技术对待验证的信息进行签名。
+Our dynamic committees involve in MPC technology. All nodes that handle a committee are signed cross-chain messages by MPC technology.
 
-### Ring VRF protocol 是怎样实现的？
+### How is the Ring VRF protocol implemented?
 
-Ring VRF 主要是对委员会节点的身份信息进行隐私保护，实现委员会匿名的动态轮值。它的算法细节较为复杂，具体的实现方式在我们的[论文](https://ieeexplore.ieee.org/document/9903072)中有详细的论证。
+Ring VRF mainly protects the identity information of the committee and realizes the dynamic rotation of committee anonymity. The details of its Algorithm are more complex, and the specific implementation method is demonstrated in detail in our [paper](https://ieeexplore.ieee.org/document/9903072).
 
-### 动态委员会是什么？扮演了什么样的角色？
+### What is a dynamic committee? What role does it play?
 
-动态委员会类似是跨链交易中的公证人，负责目标事件的监听和验证，对目标链交易进行签名。
+In contrast to the notary scheme of cross-chain technology, The dynamic committee is similar to a notary, responsible for monitoring and verification of source events, and signing the target chain transactions.
 
-### BOOL 链扮演了什么样的角色？
+### What role does the BOOL chain play?
 
-BOOL 链可视为一个公开的可信的分布式账本，一方面记录动态委员会的全生命流程（从创建到换届到销毁）保证委员会的行为真实可信。 另一方面用于记录跨链消息，并对消息共识，满足消息全链追踪。
+The BOOL chain can be regarded as an open and trusted distributed ledger. On the one hand, it records the whole life process of the dynamic committee (from creation to change to destruction) to ensure the authenticity of the committee's behavior. On the other hand, it is used to record cross-chain messages and agree on messages to meet the full chain tracking of messages.
 
-### 如何在 BOOLNetwork 上开发
+### How to develop on BOOLNetwork?
 
-目前是测试网，您可以在 BoolScan 的[控制面板]创建跨链兼容的桥。请关注我们的 [Twitter](https://twitter.com/Bool_Official) 和 [Discord](https://discord.gg/DVd4q9qq7a)，了解我们的更新。
+Currently, you can create cross-chain compatible bridges in BoolScan's [Control Panel] on Testnet. Follow us on [Twitter](https://twitter.com/Bool_Official) and [Discord](https://discord.gg/DVd4q9qq7a) for updates.
 
-## 测试网
+## Testnet
 
-### 如何获取测试币 BOL
+### How do I get BOL?
 
-BOOLNetwork 账户体系与以太坊相同。官方提供了[水龙头](https://faucet.bool.network/)免费领取测试币。
+The BOOLNetwork account system is the same as that of Ethereum. The office provides a [faucet](https://faucet.bool.network/) to receive test coins for free.
 
-### 测试币 BOL 是否有价值
+### Does the BOL have any value?
 
-没有，现阶段测试币 BOL 没有价值。在测试网网络上操作或获取 BOL 只是为了测试，参与节点质押、申请参与委员会选举的门票、支付跨链手续费。
+No, there is no value in BOL at testnet stage. Obtaining BOL on the testnet network is just for testing, participating in node pledges, applying for tickets to participate in committee elections, and paying cross-chain transaction fees.
 
 :::tip
-如果你有问题没有在这里回答，请在我们的 [Discord](https://discord.com/invite/DVd4q9qq7a) 上提问!我们的团队和生态系统始终在线，随时准备讨论新的想法和问题。
+
+If you have a question not answered here, ask it on our [Discord](https://discord.com/invite/DVd4q9qq7a). Our team and ecosystem are always online, ready to discuss new ideas and questions.
+
 :::

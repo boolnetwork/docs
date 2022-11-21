@@ -1,31 +1,34 @@
-# 架构
+# Architecture
 
-理解 BOOLNetwork 是由什么构成的
+Understand the internal structure of BOOLNetwork
 
 ---
 
-## BOOLNetwork 链
+## BOOLNetwork
 
-BOOLNetwork 链采用共识层与执行层（动态委员会）分离的模块化分层设计。共识层主要是维护一个去中心化的账本，用来给 BOOLNetwork 链提供清结算等服务；执行层会依据业务需求生成隐私的动态委员会，为客户提供包括门限签名在内的共识计算等服务。具体而言：
+The BOOLNetwork blockchain uses a Modularization layered design that separates the consensus layer from the execution layer (dynamic committee). The consensus layer is responsible for maintaining a decentralized ledger and is used to provide services such as clearing and settlement for the BOOLNetwork; the execution layer generates a dynamic hidden committee according to business requirements and provides customers with services such as consensus calculation including threshold signatures. Specifically:
 
-- 共识层仅处理 Token 的转移、质押以及解绑定等较为简单的操作。
-- 执行层的各个动态委员会相分离，不同的动态委员会可针对不同的需求做出相应的优化调整，彼此之间互相独立的完成运行。
-- 任何人只要拥有符合标准搭载 TEE 的 CPU 并抵押一定价值的 BOOL 代币都可以成为矿工。
-- 矿工以动态委员会的形式向外界提供链下共识计算和路由服务。
+- The consensus layer only handles relatively simple operations such as Token transfer, staking, and unbinding.
+- Each dynamic committee of the execution layer is separated, and different dynamic committees can make corresponding optimization adjustments for different needs, and complete the operation independently of each other.
+- Anyone who has a CPU that satisfies the standard to carry TEE and pledges a certain value of BOL tokens can become a miner.
+- Miners provide off-chain consensus computing and routing services to the outside world in the form of dynamic committees.
 
-现阶段目标是基于可信硬件与安全多方计算技术，在 substrate 框架上实现的去中心化跨链服务， 为用户提供稳定、高效以及低成本的资产跨链。
+At this stage, the goal is to achieve decentralized cross-chain services based on trusted Hardware and secure multi-party computing technology on the substrate framework, providing users with stable, efficient, and low-cost asset cross-chain.
 
-链的实现分为两部分链上逻辑和链下服务。
+The implementation of the chain is divided into two parts: on-chain logic and off-chain services.
 
-链上逻辑分为设备注册模块，挖矿模块，委员会模块（跨链）。
+The on-chain logic is divided into a device registration module, a mining module, and a committee module:
 
-- 设备注册模块：用户通过该模块注册设备，提供闲置资源，可注册通用设备、专用设备、特殊设备等。注册的特殊设备例如带有 intel 的 SGX 的服务器，可加入网络作为去中心化跨链的基础设施。
-- 挖矿模块： 对于提供资源的用户，网络会发放代币作为回报，资源包括硬件、代币。为保证系统资源的有效性，用户设备硬件在挖矿期间必须保持在线，否则受到惩罚。
-- 委员会模块（跨链）： 作为跨链实现的调度模块，在链上记录委员会信息，为了保证委员会有高隐私性，设计了基于零知识证明的 RVRF 选择算法，避免用户暴露信息。
+- Device registration module: Users register devices through this module, providing idle resources, and can register general devices, special devices, special devices, etc. Registered special devices such as servers with intel SGX can join the network as a decentralized cross-chain infrastructure.
 
-链下服务分为监听服务，中继服务，私钥管理服务
+- Mining module: For users who provide hardware or token resources, the network will reward tokens. To ensure the availability of system resources, the user's device must stay online during mining, otherwise, it will be punished.
 
-- 监听服务： 监听服务负责从 BOOLNetwork 链或者其他链例如以太坊上获取相关数据，并根据系统要求合成数据。
-- 中继服务：作为跨链系统的辅助服务，主要功能是从 BOOLNetwork 链上获取验证后的跨链信息，然后提交到目标链上，从中获取收益，理论上任何人都可以作为一个中继服务，为了避免数据无效的重复的上链，可通过治理方式选出。
+- Committee module: As a scheduling module implemented across the chain, committee information is recorded on the chain. To ensure the high privacy of the committee, an RVRF selection Algorithm based on zero-knowledge proofs is designed to avoid users exposing information.
 
-- 私钥管理服务： 是跨链系统的核心组件，负责存储跨链时用到的私钥。 每个矿工节点可视为一个私钥管理服务，系统从一批矿工中选择部分节点，由这部分节点共同维护私钥。私钥管理服务将支持多种签名协议，例如 ECDSA，BLS，Schnorr 等。私钥服务是运行在 SGX 中的，所以在启动的时候需要在到英特尔服务上注册，并将身份提交到链上。
+Off-chain services are divided into monitoring services, relay services, and private key management services:
+
+- Listening service: The listening service is responsible for getting events from the BOOLNetwork blockchain or other chains such as Ethereum, and synthesizing the data according to system requirements.
+
+- Relayer service: As an auxiliary service of the cross-chain system, the main role is to bring the verified cross-chain information from the BOOLNetwork blockchain, and then submit it to the target chain to obtain rewards. In theory, anyone can act as a relayer service. To avoid repeated uploading of invalid data, it can be selected through governance.
+
+- Private key management service: It is the core component of the cross-chain system and is responsible for storing the private key used when cross-chain. Each miner node can be regarded as a private key management service. The system selects a part of nodes from a group of miners as a committee, and these nodes jointly maintain the private key. The private key management service will support multiple signature protocols, such as ECDSA, BLS, Schnorr, etc. The private key service must run in SGX, so it needs to be registered with the Intel service and submit the identity to the chain when starting.
