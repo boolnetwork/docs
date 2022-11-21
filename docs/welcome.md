@@ -4,7 +4,7 @@ sidebar_position: 1
 slug: /
 ---
 
-# Getting Started Guide
+# Welcome
 
 The vision of BOOLNetwork is to connect everything, build a trusted network across the world for Web3, and be the TCP/IP protocol of Web3.
 
@@ -34,7 +34,7 @@ As a holder, validator and developer, use the tools in the BOOLNetwork ecosystem
 [Validator](/developer/validator)  
 [Dynamic Committee](/developer/tee)
 
-## 预览 BOOLNetwork
+## Preview BOOLNetwork
 
 [Wallet](/tools/wallet)  
 [Explorer](https://boolscan.com/)
