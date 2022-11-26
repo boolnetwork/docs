@@ -25,9 +25,9 @@ BOOLNetwork 链的账户是以太坊兼容的，因此安装了 Metamask 插件�
 
 如果你需要获取更多非官方测试链的资产，并与 BOOLNetwork 链交互。你可以尝试如下水龙头：
 
-- [Goerli 水龙头](https://goerli-faucet.mudit.blog)(Goerli)
-- [Polygon 测试网水龙头](https://faucet.polygon.technology/)(Polygon Mumbai)
-- [Binance 测试网水龙头](https://testnet.binance.org/faucet-smart)(BSC Testnet)
+- [Goerli 水龙头](https://goerlifaucet.com/)(Goerli)
+- [Polygon TestNet 水龙头](https://mumbaifaucet.com/)(Polygon Mumbai)
+- [Optimism Goerli 水龙头](https://community.optimism.io/docs/useful-tools/faucets/#)(Optimism Goerli)
 
 ## 通过以下任一方式加入
 

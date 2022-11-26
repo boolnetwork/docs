@@ -25,9 +25,9 @@ The official [faucet](https://faucet.bool.network/)is provided to claim the test
 
 If you need to acquire more assets of the unofficial test chain and interact with the BOOLNetwork chain. You can try the following faucets:
 
-- [Goerli Faucet](https://goerli-faucet.mudit.blog)(Goerli)
-- [Polygon TestNet Faucet](https://faucet.polygon.technology/)(Polygon Mumbai)
-- [Binance TestNet Faucet](https://testnet.binance.org/faucet-smart)(BSC Testnet)
+- [Goerli Faucet](https://goerlifaucet.com/)(Goerli)
+- [Polygon TestNet Faucet](https://mumbaifaucet.com/)(Polygon Mumbai)
+- [Optimism Goerli Faucet](https://community.optimism.io/docs/useful-tools/faucets/#)(Optimism Goerli)
 
 ## Join by any of the following ways
 
