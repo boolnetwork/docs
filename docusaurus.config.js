@@ -9,7 +9,7 @@ const config = {
   title: "BOOLNetwork Documentations",
   tagline: "web3 Infrastructure",
   url: "https://docs.bool.network",
-  baseUrl: "/docs",
+  baseUrl: "/docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
