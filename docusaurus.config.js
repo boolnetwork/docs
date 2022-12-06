@@ -9,7 +9,7 @@ const config = {
   title: "BOOLNetwork Documentations",
   tagline: "web3 Infrastructure",
   url: "https://docs.bool.network",
-  baseUrl: "/",
+  baseUrl: "/docs",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -34,7 +34,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          routeBasePath: "/docs",
+          routeBasePath: "/",
           sidebarCollapsible: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
